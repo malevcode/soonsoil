@@ -1,0 +1,243 @@
+import React from 'react';
+import { ChevronDown, Leaf, Clock, Coffee, Mail, Instagram, Twitter } from 'lucide-react';
+
+const SoonSoilWebsite = () => {
+  const [formData, setFormData] = React.useState({
+    fullName: '',
+    email: '',
+    companyName: '',
+    phoneNumber: '',
+    message: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <div className="min-h-screen bg-green-50/30">
+      {/* Navigation */}
+      <nav className="bg-white border-b">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16 items-center">
+            <div className="flex items-center">
+              <img src="/api/placeholder/40/40" alt="SoonSoil Logo" className="h-10" />
+              <span className="ml-2 text-xl text-green-800">SoonSoil</span>
+            </div>
+            <div className="flex items-center space-x-6">
+              <a href="#about" className="text-gray-600 hover:text-green-800">Learn More</a>
+              <a href="#sample" className="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-800">
+                Request a Sample
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+            SoonSoil: Becoming Soil Sooner
+          </h1>
+          <div className="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <h2 className="text-2xl font-bold text-green-800 mb-2">SoonSoil Biodegradable Cups</h2>
+            <p className="text-gray-600 mb-4">Eco-friendly solutions for NYC caterers</p>
+            <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+              ASTM D5511 Certified
+            </span>
+            <img src="/api/placeholder/400/300" alt="SoonSoil cup visualization" className="mt-6 mx-auto rounded-lg" />
+          </div>
+        </div>
+      </div>
+
+      {/* Features and Why Choose Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-white rounded-lg shadow-sm p-8 grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-xl font-bold text-green-800 mb-6">Product Features</h2>
+            <ul className="space-y-4">
+              <li className="flex items-center">
+                <Leaf className="h-5 w-5 text-green-600 mr-3" />
+                <span>Made from polyearthylene by Verde Bioresins</span>
+              </li>
+              <li className="flex items-center">
+                <Clock className="h-5 w-5 text-green-600 mr-3" />
+                <span>Biodegradable in 1-5 years in landfills</span>
+              </li>
+              <li className="flex items-center">
+                <Coffee className="h-5 w-5 text-green-600 mr-3" />
+                <span>Available in 8 oz, 12 oz, and 16 oz sizes</span>
+              </li>
+              <li className="flex items-start">
+                <Coffee className="h-5 w-5 text-green-600 mr-3 mt-1" />
+                <span>Suitable for hot and cold beverages</span>
+              </li>
+              <li className="flex items-start">
+                <Leaf className="h-5 w-5 text-green-600 mr-3 mt-1" />
+                <span>Customizable with your logo</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-green-800 mb-6">Why Choose SoonSoil?</h2>
+            <p className="text-gray-600 mb-6">
+              Our cups are not just eco-friendly, they're a step towards a sustainable future. With ASTM D5511 certification, you can be confident in their biodegradability even in landfill conditions.
+            </p>
+            <p className="text-gray-600 mb-6">
+              By choosing SoonSoil, you're not just serving drinks - you're serving the planet.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16" id="about">
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-xl font-bold text-green-800 mb-6">About Us</h2>
+          <p className="text-gray-600 mb-8">
+            Soon Soil is a startup comprised of recent college graduates who are trying to solve the problem of single-use plastic waste.
+          </p>
+          
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-lg font-bold text-green-800 mb-4">What's the problem?</h3>
+              <p className="text-gray-600">
+                Single-use plastic cups (think Solo Cups) take 500-1000 years to biodegrade in a landfill. In that time, they break down into toxic microplastics which get eaten by smaller animals, unintentionally ending up in our ecosystems and digestive systems.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-green-800 mb-4">How is SoonSoil solving this?</h3>
+              <p className="text-gray-600">
+                We manufacture bioplastic products that anaerobically (without exposure to oxygen) biodegrade in 1-5 years in a landfill. The variability in biodegradation time is determined by how biologically active the landfill is. Landfills with more microorganisms will fully biodegrade our products sooner than those with less microbial activity.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-green-800 mb-4">What allows your cups to do this?</h3>
+              <p className="text-gray-600">
+                We use a material called PolyEarthylene, derived from corn and starch, which we manufacture into cups. The material is organic, bio-based, and most importantly landfill biodegradable. This unique composition allows it to be broken down by microorganisms present in landfills, regardless of oxygen availability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Truth About Recycling */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-xl font-bold text-green-800 mb-6">The Truth About Recycling</h2>
+          <div className="space-y-6">
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+              <p className="text-gray-700">
+                So when your cups end up in the landfill, do you want to leave them there for up to 1000 years or 3?
+              </p>
+            </div>
+            <p className="text-gray-600">
+              Recycling is a fallacy meant to push blame from the producers onto the consumers. 1% of all plastic cups ever produced have been recycled. Less than 10% of plastic ever produced has been recycled. Plastic cups are notoriously hard to recycle.
+            </p>
+            <div>
+              <h3 className="text-lg font-bold text-green-800 mb-4">Well, what if I recycle my cups?</h3>
+              <p className="text-gray-600">
+                You probably won't. Or if you do, you won't do it right. Any item you want to recycle that isn't clean (washed and dried) is not recyclable and will get sent to a landfill. Even if you do wash and dry every plastic cup you use, if your recycling is polluted with just one piece of trash it can ruin the whole bag and get sent to a landfill.
+              </p>
+            </div>
+            <div className="text-center py-4">
+              <p className="text-lg font-medium text-green-800">"Recyclable" excuses the creation of long-lasting waste in a toxic cycle.</p>
+              <p className="text-xl font-bold text-green-800 mt-2">Biodegradable breaks the cycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-xl font-bold text-green-800 mb-6">Frequently Asked Questions</h2>
+          {[
+            "Why do SoonSoil cups biodegrade faster than regular plastic cups?",
+            "What factors affect the biodegradation time of SoonSoil cups?",
+            "Are SoonSoil cups safe for hot beverages?",
+            "How do I dispose of SoonSoil cups?",
+            "What's the environmental impact of producing SoonSoil cups compared to regular plastic cups?"
+          ].map((question, index) => (
+            <div key={index} className="py-4 border-b border-gray-100 last:border-0">
+              <button className="w-full flex justify-between items-center text-left">
+                <span className="text-gray-700">{question}</span>
+                <ChevronDown className="h-5 w-5 text-green-600" />
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Sample Request Form */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16" id="sample">
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-2xl font-bold text-green-800 mb-6">Request a Sample</h2>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="text"
+                placeholder="Company Name"
+                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+            <textarea
+              placeholder="Tell us about your business and how you plan to use our cups"
+              rows={4}
+              className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <button
+              type="submit"
+              className="w-full bg-green-700 text-white py-3 rounded-md hover:bg-green-800 transition-colors"
+            >
+              Submit Sample Request
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <h2 className="text-2xl font-bold text-green-800 mb-6">Switch to Sustainable Soon</h2>
+          <p className="text-gray-600 mb-4">Contact us at:</p>
+          <div className="space-y-3">
+            <a href="mailto:gosoonsoil@gmail.com" className="flex items-center text-green-700 hover:text-green-800">
+              <Mail className="h-5 w-5 mr-2" />
+              gosoonsoil@gmail.com
+            </a>
+            <a href="https://instagram.com/soonsoil" className="flex items-center text-green-700 hover:text-green-800">
+              <Instagram className="h-5 w-5 mr-2" />
+              @soonsoil
+            </a>
+            <a href="https://twitter.com/soonsoil" className="flex items-center text-green-700 hover:text-green-800">
+              <Twitter className="h-5 w-5 mr-2" />
+              @soonsoil
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SoonSoilWebsite;
