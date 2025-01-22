@@ -1,0 +1,52 @@
+import React from 'react';
+import { ChevronDown, Leaf, Clock, Coffee, Mail, Instagram, Twitter } from 'lucide-react';
+
+const SoonSoilWebsite = () => {
+  // ... (previous state code remains the same)
+
+  return (
+    <div className="min-h-screen bg-green-50/30">
+      {/* Navigation */}
+      <nav className="bg-white border-b">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16 items-center">
+            <div className="flex items-center">
+              <img 
+                src="/images/soonsoil-logo.svg" 
+                alt="SoonSoil Logo" 
+                className="h-10 w-auto"
+              />
+              <span className="ml-2 text-xl text-green-800">SoonSoil</span>
+            </div>
+            {/* ... rest of nav remains the same ... */}
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+            SoonSoil: Becoming Soil Sooner
+          </h1>
+          <div className="bg-white rounded-lg shadow-sm p-8 mb-12">
+            <h2 className="text-2xl font-bold text-green-800 mb-2">SoonSoil Biodegradable Cups</h2>
+            <p className="text-gray-600 mb-4">Eco-friendly solutions for NYC caterers</p>
+            <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+              ASTM D5511 Certified
+            </span>
+            <img 
+              src="/images/soonsoil-logo.svg"
+              alt="SoonSoil biodegradable cup with logo" 
+              className="mt-6 mx-auto rounded-lg max-w-md w-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* ... rest of the component remains the same ... */}
+    </div>
+  );
+};
+
+export default SoonSoilWebsite;
